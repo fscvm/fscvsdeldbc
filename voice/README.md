@@ -1,19 +1,10 @@
-# Voice Conversion
-
-https://drive.google.com/file/d/1QwV-gSHCnVijLMXnKgMDmcVByNlwYpoL/view?usp=sharing  - universal vocoder
-https://drive.google.com/file/d/1qFpR6vVxQHt7fdo5f4fzTvEChCIB34uC/view?usp=sharing  - vctk vocoder
-https://drive.google.com/file/d/1aZJ0R8Gr3lli2Fk0s3havwV9PtRLCkpx/view?usp=sharing  - encoder
-https://drive.google.com/file/d/1yqFDAPQz-nQLYR7qFSyuSaqZtVP5pcZ1/view?usp=sharing  - vc model
-
 # Voice conversion with the pre-trained models
 
 Please check *inference.ipynb* for the detailed instructions.
 
-The pre-trained universal HiFi-GAN vocoder we use is available at https://drive.google.com/file/d/10khlrM645pTbQ4rc2aNEYPba8RFDBkW-/view?usp=sharing. It is taken from the official HiFi-GAN repository. Please put it to *checkpts/vocoder/*
+The HiFi-GAN vocoder we use in the paper was trained on VCTK. It is available at https://drive.google.com/file/d/1qFpR6vVxQHt7fdo5f4fzTvEChCIB34uC/view?usp=sharing. It is taken from the official HiFi-GAN repository. Please put it to *checkpts/vocoder/vctk/*. Additionally, you can load the universal HiFi-GAN vocoder from https://drive.google.com/file/d/1QwV-gSHCnVijLMXnKgMDmcVByNlwYpoL/view?usp=sharing and put it to *checkpts/vocoder/universal/*
 
-You have to download voice conversion model trained on LibriTTS from here: https://drive.google.com/file/d/18Xbme0CTVo58p2vOHoTQm8PBGW7oEjAy/view?usp=sharing
-
-Additionally, we provide voice conversion model trained on VCTK: https://drive.google.com/file/d/12s9RPmwp9suleMkBCVetD8pub7wsDAy4/view?usp=sharing
+You have to download voice conversion model trained on LibriTTS from here: https://drive.google.com/file/d/1yqFDAPQz-nQLYR7qFSyuSaqZtVP5pcZ1/view?usp=sharing
 
 Please put voice conversion models to *checkpts/vc/*
 
@@ -23,7 +14,7 @@ Please put voice conversion models to *checkpts/vc/*
 
 1. If you want to train the encoder, create "logs_enc" directory and run *train_enc.py*. Before that, you have to prepare another folder "mels_mode" with mel-spectrograms of the "average voice" (i.e. target mels for the encoder) in the data directory. To obtain them, you have to run Montreal Forced Aligner on the input mels, get *.TextGrid* files and put them to "textgrids" folder in the data directory. Once you have "mels" and "textgrids" folders, run *get_avg_mels.ipynb*.
 
-2. Alternatively, you may load the encoder trained on LibriTTS from https://drive.google.com/file/d/1JdoC5hh7k6Nz_oTcumH0nXNEib-GDbSq/view?usp=sharing and put it to "logs_enc" directory.
+2. Alternatively, you may load the encoder trained on LibriTTS from https://drive.google.com/file/d/1aZJ0R8Gr3lli2Fk0s3havwV9PtRLCkpx/view?usp=sharing and put it to "logs_enc" directory.
 
 3. Once you have the encoder *enc.pt* in "logs_enc" directory, create "logs_dec" directory and run *train_dec.py* to train the diffusion-based decoder.
 
