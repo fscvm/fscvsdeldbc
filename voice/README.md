@@ -2,11 +2,9 @@
 
 Please check *inference.ipynb* for the detailed instructions.
 
-The HiFi-GAN vocoder we use in the paper was trained on VCTK. It is available at https://drive.google.com/file/d/1qFpR6vVxQHt7fdo5f4fzTvEChCIB34uC/view?usp=sharing. It is taken from the official HiFi-GAN repository. Please put it to *checkpts/vocoder/vctk/*. Additionally, you can load the universal HiFi-GAN vocoder from https://drive.google.com/file/d/1QwV-gSHCnVijLMXnKgMDmcVByNlwYpoL/view?usp=sharing and put it to *checkpts/vocoder/universal/*
+The HiFi-GAN vocoder we use in the paper was trained on VCTK. It is available at https://drive.google.com/file/d/1qFpR6vVxQHt7fdo5f4fzTvEChCIB34uC/view?usp=sharing. It is taken from the official HiFi-GAN repository. Please put it to *checkpts/vocoder/vctk/*. Additionally, you can load the universal HiFi-GAN vocoder from https://drive.google.com/file/d/1QwV-gSHCnVijLMXnKgMDmcVByNlwYpoL/view?usp=sharing and put it to *checkpts/vocoder/universal/*.
 
-You have to download voice conversion model trained on LibriTTS from here: https://drive.google.com/file/d/1yqFDAPQz-nQLYR7qFSyuSaqZtVP5pcZ1/view?usp=sharing
-
-Please put voice conversion models to *checkpts/vc/*
+You have to download voice conversion model trained on LibriTTS from here: https://drive.google.com/file/d/1yqFDAPQz-nQLYR7qFSyuSaqZtVP5pcZ1/view?usp=sharing. Please put it to *checkpts/vc/*.
 
 # Training your own model
 
